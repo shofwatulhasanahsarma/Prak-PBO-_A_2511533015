@@ -27,6 +27,7 @@ public class Main {
             System.out.println("3. Tarik Tunai");
             System.out.println("4. Cek Informasi Rekening");
             System.out.println("5. Ganti Akun");
+            System.out.println("6. Cetak Mutasi (Riwayat)");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
 
@@ -189,6 +190,26 @@ public class Main {
                                 "Gagal: Nomor rekening tidak ditemukan!"
                             );
                         }
+                    }
+
+                    break;
+
+
+                // ==========================================
+                // 6. CETAK MUTASI (RIWAYAT)
+                // ==========================================
+                case 6:
+
+                    if (akunAktif == null) {
+
+                        System.out.println(
+                            "Error: Anda belum membuka rekening."
+                        );
+
+                    } else {
+
+                        // Memanggil method cetakMutasi()
+                        akunAktif.cetakMutasi();
                     }
 
                     break;

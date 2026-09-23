@@ -12,20 +12,12 @@ public class Transaksi {
 	this.nominal = nominal;
 	}
 	
-public class transaksiTerbaru {
-	static String idTransaksi;
-	static String jenisTransaksi;
-	static double nominal;
-	
-	public transaksiTerbaru (String ID, String Jenis, double Nominal) {
-		this.idTransaksi = ID;
-		this.jenisTransaksi = Jenis;
-		this.nominal = Nominal;
-		}
-	
-public void cetakDetail () {
-	System.out.println ("id: " + idTransaksi + "| jenis: " + jenisTransaksi + "|nominal: Rp" + nominal);
-	System.out.println ("ID: " + transaksiTerbaru.idTransaksi + "| Jenis: " + transaksiTerbaru.jenisTransaksi + "|Nominal: Rp" + transaksiTerbaru.nominal);
-}
-}
+	 // Method cetak detail transaksi
+    public void cetakDetail() {
+        System.out.println(
+            "ID: " + idTransaksi
+            + " | Jenis: " + jenisTransaksi
+            + " | Nominal: Rp" + nominal
+        );
+    }
 }
