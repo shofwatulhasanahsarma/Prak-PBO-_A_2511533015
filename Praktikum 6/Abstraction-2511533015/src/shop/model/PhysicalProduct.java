@@ -1,0 +1,25 @@
+package shop.model;
+import shop.shipping.Shippable;
+
+public class PhysicalProduct extends Product implements Shippable {
+
+    private final int weightGrams;
+
+    public PhysicalProduct(String sku, String name, long price, int weightGrams) {
+        super(sku, name, price);
+        if (weightGrams <= 0) {
+            throw new IllegalArgumentException(
+                "weightGrams harus lebih dari 0, diterima: " + weightGrams);
+        }
+        this.weightGrams = weightGrams;
+    }
+
+    public int getWeightGrams() {
+        return weightGrams;
+    }
+
+    @Override
+    public String category() {
+        return "Fisik";
+    }
+}
